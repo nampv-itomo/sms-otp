@@ -75,7 +75,8 @@ function App() {
 
   const onLoginHost = async () => {
     const data = await axios.post(
-      "https://api.hair.itomo.one/api/v1/auth/login",
+      "http://api.hair.itomo.one/api/v1/auth/login",
+      // "https://api.woodpro.duclam.com/api/v1/auth/login",
       {
         username: "admin",
         password: "123456",
@@ -97,9 +98,13 @@ function App() {
   };
 
   const onGetInfoServer = async () => {
-    const data = await axios.get("https://api.hair.itomo.one/api/v1/auth/info", {
+    const data = await axios.get("http://api.hair.itomo.one/api/v1/auth/info", {
       withCredentials: true,
     });
+
+    // const data = await axios.get("https://api.woodpro.duclam.com/api/v1/users/me", {
+    //   withCredentials: true,
+    // });
 
     console.log(data.data);
   };
