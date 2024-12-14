@@ -75,7 +75,7 @@ function App() {
 
   const onLoginHost = async () => {
     const data = await axios.post(
-      "http://api.hair.itomo.one/api/v1/auth/login",
+      "https://api.hair.itomo.one/api/v1/auth/login",
       // "https://api.woodpro.duclam.com/api/v1/auth/login",
       {
         username: "admin",
@@ -98,7 +98,7 @@ function App() {
   };
 
   const onGetInfoServer = async () => {
-    const data = await axios.get("http://api.hair.itomo.one/api/v1/auth/info", {
+    const data = await axios.get("https://api.hair.itomo.one/api/v1/auth/info", {
       withCredentials: true,
     });
 
